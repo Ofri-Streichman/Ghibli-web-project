@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>MyGhibli!</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="film_container">
+        <h1><%= title %></h1>
+        <h2><%= original_title %></h2>
+        <h2><%= original_title_romanised %></h2>
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front">
+              <img src="<%= image %>" alt="Movie Poster" />
+            </div>
+            <div class="back">
+              <img src="<%= movie_banner %>" alt="Movie Banner" />
+            </div>
+          </div>
+        </div>
+        <p><%= description %></p>
+        <p class="year"><%= release_date %></p>
+      </div>
+    </div>
+  </body>
+</html>
