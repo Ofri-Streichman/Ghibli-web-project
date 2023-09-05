@@ -40,11 +40,12 @@ body {
 
 img {
     height: 30vh;
-    /* position: absolute; */
+    position: relative;
 }
 
 .front,
 .back {
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,9 +56,6 @@ img {
     background-color: rgba(255, 103, 166, 0.26);
 }
 
-.back{
-    top: -30vh;
-}
 
 .front {
     z-index: 2;
