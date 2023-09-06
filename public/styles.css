@@ -1,9 +1,21 @@
-
+.page{
+    max-height: 100vh;
+    overflow-y: auto;
+}
 
 .film_container{
+    align-content: flex-start;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.detail-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -17,13 +29,30 @@ body {
     background-color: #e9e4db;
 }
 
+h1{
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    margin-top: 3vh;
+    margin-bottom: 10px;
+}
+
 h2{
     font-size: 18px;
-    margin: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
 p{
     margin: 10px;
+    margin-bottom: 0;
     padding: 10px;
     font-size: 16px;
 }
@@ -37,11 +66,26 @@ p{
     box-shadow: inset 0px 0px 20px rgb(173, 172, 168);
     border-radius: 30px;
     max-width: 75vw;
-    /* min-height: 30vh; */
+    margin-bottom: 20px;
 }
-.year{
+.detail{
     margin-top: 0;
     font-weight: 700;
+}
+
+.year{
+    text-align: left;
+}
+
+.time {
+    text-align: right;
+}
+
+.trailer{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
 }
 
 .flip-container {
@@ -87,4 +131,6 @@ img {
 .flipper:hover {
     transform: rotateY(180deg);
 }
+
+/* ___________________________________ */
 

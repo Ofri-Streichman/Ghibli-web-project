@@ -7,26 +7,44 @@
     <title>MyGhibli!</title>
   </head>
   <body>
-    <div class="page" >
+    <div class="page">
       <div class="film_container">
-        <h1><%= title %></h1>
-        <h2><%= original_title %></h2>
-        <h2><%= original_title_romanised %></h2>
+        <h1><%= film.title %></h1>
+        <h2><%= film.original_title %></h2>
+        <h3>(<%= film.original_title_romanised %>)</h3>
         <div class="flip-container">
           <div class="flipper">
             <div class="front">
-              <img src="<%= image %>" alt="Movie Poster" />
+              <img src="<%= film.image %>" alt="Movie Poster" />
             </div>
             <div class="back">
-              <img src="<%= movie_banner %>" alt="Movie Banner" />
+              <img src="<%= film.movie_banner %>" alt="Movie Banner" />
             </div>
           </div>
         </div>
-        
+
         <div class="info">
-        <p><%= description %></p>
-        <p class="year">Release Year: <%= release_date %></p>
+          <p><%= film.description %></p>
+          <div class="detail-container">
+            <p class="year detail">Release Year: <%= film.release_date %></p>
+            <p class="director detail">Directed by: <%= film.director %></p>
+            <p class="time detail">Running Time: <%= film.running_time %></p>
+          </div>
         </div>
+
+        <div class="trailer">
+          <h3>Trailer:</h3>
+          <iframe
+          id="bgmusic"
+          width="500px"
+          height="320px"
+          margin="10px"
+          src="https://www.youtube.com/embed/<%= trailer %>"
+          frameborder="0"
+          allow="autoplay;"
+        ></iframe>
+        </div>
+        
       </div>
     </div>
   </body>
